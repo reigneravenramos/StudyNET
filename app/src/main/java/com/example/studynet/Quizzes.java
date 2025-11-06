@@ -75,8 +75,8 @@ public class Quizzes extends AppCompatActivity {
                 overridePendingTransition(0,0);
                 finish();
                 return true;
-            } else if (itemId == R.id.nav_sessions) {
-                startActivity(new Intent(getApplicationContext(), Sessions.class));
+            } else if (itemId == R.id.nav_modules) {
+                startActivity(new Intent(getApplicationContext(), Modules.class));
                 overridePendingTransition(0,0);
                 finish();
                 return true;

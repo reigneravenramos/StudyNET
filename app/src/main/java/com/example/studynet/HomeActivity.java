@@ -10,7 +10,7 @@ public class HomeActivity extends AppCompatActivity implements OnNavigateListene
 
     final FragmentManager fm = getSupportFragmentManager();
     final Fragment homeFragment = new HomeFragment();
-    final Fragment sessionsFragment = new SessionsFragment();
+    final Fragment modulesFragment = new ModulesFragment();
     final Fragment quizzesFragment = new QuizzesFragment();
     Fragment activeFragment = homeFragment;
 
@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity implements OnNavigateListene
         }
 
         fm.beginTransaction().add(R.id.fragment_container, quizzesFragment, "quizzes").hide(quizzesFragment).commit();
-        fm.beginTransaction().add(R.id.fragment_container, sessionsFragment, "sessions").hide(sessionsFragment).commit();
+        fm.beginTransaction().add(R.id.fragment_container, modulesFragment, "modules").hide(modulesFragment).commit(); // Renamed tag
         fm.beginTransaction().add(R.id.fragment_container, homeFragment, "home").commit();
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -39,9 +39,9 @@ public class HomeActivity extends AppCompatActivity implements OnNavigateListene
                 fm.beginTransaction().hide(activeFragment).show(homeFragment).commit();
                 activeFragment = homeFragment;
                 return true;
-            } else if (itemId == R.id.nav_sessions) {
-                fm.beginTransaction().hide(activeFragment).show(sessionsFragment).commit();
-                activeFragment = sessionsFragment;
+            } else if (itemId == R.id.nav_modules) { // Assuming R.id.nav_sessions remains for the menu item ID
+                fm.beginTransaction().hide(activeFragment).show(modulesFragment).commit(); // Renamed fragment
+                activeFragment = modulesFragment;
                 return true;
             } else if (itemId == R.id.nav_quizzes) {
                 fm.beginTransaction().hide(activeFragment).show(quizzesFragment).commit();
@@ -53,8 +53,8 @@ public class HomeActivity extends AppCompatActivity implements OnNavigateListene
     }
 
     @Override
-    public void navigateToSessions() {
-        bottomNavigationView.setSelectedItemId(R.id.nav_sessions);
+    public void navigateToModules() { // Assuming this method name must be refactored too
+        bottomNavigationView.setSelectedItemId(R.id.nav_modules);
     }
 
     @Override

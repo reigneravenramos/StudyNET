@@ -37,7 +37,7 @@ public class HomeFragment extends Fragment {
 
         Button btnModules = view.findViewById(R.id.btn_modules);
         btnModules.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), SessionsIntroActivity.class);
+            Intent intent = new Intent(getActivity(), ModulesIntroActivity.class);
             startActivity(intent);
         });
 

@@ -29,32 +29,32 @@
             android:name=".Quizzes1"
             android:exported="false" />
         <activity
-            android:name=".Sessions5"
+            android:name=".Modules5"
             android:exported="false" />
         <activity
-            android:name=".Sessions4"
-            android.exported="false" />
-        <activity
-            android:name=".Sessions3"
+            android:name=".Modules4"
             android:exported="false" />
         <activity
-            android:name=".Sessions2"
+            android:name=".Modules3"
             android:exported="false" />
         <activity
-            android:name=".Sessions1"
+            android:name=".Modules2"
+            android:exported="false" />
+        <activity
+            android:name=".Modules1"
             android:exported="false" />
         <activity
             android:name=".Quizzes"
             android:exported="false"
             android:label="QUIZZES" />
         <activity
-            android:name=".Sessions"
+            android:name=".Modules"
             android:exported="false"
-            android:label="SESSIONS" />
+            android:label="MODULES" />
         <activity
-            android:name=".SessionsIntroActivity"
+            android:name=".ModulesIntroActivity"
             android:exported="false"
-            android:label="SESSIONS" />
+            android:label="MODULES" />
         <activity
             android:name=".QuizzesIntroActivity"
             android:exported="false"
