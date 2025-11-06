@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Sessions extends AppCompatActivity {
     private Button btn_sessions1;
@@ -63,6 +64,26 @@ public class Sessions extends AppCompatActivity {
                 Intent intent_session = new Intent(Sessions.this, Sessions5.class);
                 startActivity(intent_session);
             }
+        });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.nav_sessions);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.nav_home) {
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                overridePendingTransition(0,0);
+                finish();
+                return true;
+            } else if (itemId == R.id.nav_sessions) {
+                return true;
+            } else if (itemId == R.id.nav_quizzes) {
+                startActivity(new Intent(getApplicationContext(), Quizzes.class));
+                overridePendingTransition(0,0);
+                finish();
+                return true;
+            }
+            return false;
         });
     }
 }

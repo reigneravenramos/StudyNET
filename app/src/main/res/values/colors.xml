@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--button (mayablue)-->
+    <!-- App Theme Colors -->
+    <color name="app_bar_color">#1A237E</color>
+    <color name="button_color">#64B5F6</color>
+
+    <!-- Standard Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Original Theme Colors (for reference) -->
     <color name="purple_200">#73c2fb</color>
     <color name="purple_500">#73c2fb</color>
     <color name="purple_700">#1E90FF</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <!--text (white)-->
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFF0</color>
     <color name="dodgerblue">#1E90FF</color>
-    <color name="title_color"></color>
 </resources>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Quizzes extends AppCompatActivity {
     private Button btn_quizzes1;
@@ -63,6 +64,26 @@ public class Quizzes extends AppCompatActivity {
                 Intent intent_session = new Intent(Quizzes.this, Quizzes5.class);
                 startActivity(intent_session);
             }
+        });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.nav_quizzes);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.nav_home) {
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                overridePendingTransition(0,0);
+                finish();
+                return true;
+            } else if (itemId == R.id.nav_sessions) {
+                startActivity(new Intent(getApplicationContext(), Sessions.class));
+                overridePendingTransition(0,0);
+                finish();
+                return true;
+            } else if (itemId == R.id.nav_quizzes) {
+                return true;
+            }
+            return false;
         });
     }
 }
