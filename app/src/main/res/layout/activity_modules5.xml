@@ -2,358 +2,376 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
-    android:background="#FFFFF0"
-    android:fillViewport="true"
-    tools:layout_editor_absoluteX="2dp"
-    tools:layout_editor_absoluteY="-1dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Modules1"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="-1dp">
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="48dp"
+        tools:context=".Modules1">
 
+        <!-- Title -->
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="28dp"
-            android:text="COMMUNICATING OVER THE NETWORK PART 1"
+            android:layout_marginTop="12dp"
+            android:text="@string/module5_title"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Network Structure Section -->
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="64dp"
-            android:text="Network Structure"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_network_structure"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="368dp"
-            android:layout_height="180dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
-            android:text="          Communication begins with a message, or information that must be sent from one individual or device to another. There are many different communication methods and these methods have three elements in common. First is the ‘message source or sender’, these are the people or electronic devices that is needed to send a message to other individuals or devices. Second is the ‘destination or receiver’, which receives the message and interprets it. Lastly is the ‘channel’ which consist of the media that provides the pathway over which the message can travel from source to destination."
-            android:textAlignment="viewStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_network_structure_desc"
             android:textColor="#000000"
             android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+        <!-- How are messages communicated? Section -->
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginBottom="214dp"
-            android:text="How are messages communicated?"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_how_messages_communicated"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="353dp"
-            android:layout_height="180dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="          •	First is the ‘multiplexing’, it is the process used to interleave the pieces of separate conversations together on the network. By sending smaller individual pieces from source to destination, many different conversations can be interleaved on the network. \n\n         •	Second is the ‘segmentation’, which increases reliability of network communications. The separate pieces of each message do not need to travel the same pathway across the network from source to destination."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_message_communication_methods"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
+        <!-- What are the components of a network? Section -->
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="214dp"
-            android:text="What are the components of a network?"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_network_components"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.002" />
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="353dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="90dp"
-            android:text="          •	‘Hardware’, is often the visible components of the network platform such as laptop, a PC, a switch, or the cabling used to connect the devices. \n\n         •	‘Software’, is the services and processes of the communication programs. A network service provides information in response to a request."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_network_components_desc"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
+        <!-- Placeholder for Image 1 -->
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="381dp"
-            android:layout_height="197dp"
-            android:layout_marginTop="668dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:minHeight="150dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
             app:srcCompat="@drawable/components_of_networking"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:ignore="ContentDescription" />
 
+        <!-- End Devices and their Role Section -->
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="214dp"
-            android:text="End Devices and their Role in the Network"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_end_devices_role"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.012" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="353dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:text="          •	End devices form interface with human network and communication network \n\n         •	Role of end devices:"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_end_devices_intro"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="353dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="          o	‘Clients’ are hosts that have software installed that enables them to request and display the information obtained from the server. \n\n         o	Servers are hosts that have software installed that enables them to provide information and services, like e-mail or web pages, to other hosts on the network. \n\n          o	Both client and server in modern networks, a host can act as a client, a server, or both. Software installed on the host determines which role it plays on the network."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_end_devices_roles_detail"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
+        <!-- Role of Intermediary Devices Section -->
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="214dp"
-            android:text="Role of Intermediary Devices"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_intermediary_devices"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            app:layout_constraintVertical_bias="0.002" />
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="353dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="          •	In addition to the end devices that people are familiar with, networks also rely on intermediary devices to provide connectivity and to work behind the scenes to ensure that data flows across the network. These devices connect the individual host to the network and can connect multiple individual networks to form an internetwork."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_intermediary_devices_desc"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
+        <!-- Placeholder for Image 2 -->
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="370dp"
-            android:layout_height="360dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="1356dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:minHeight="150dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/intermediary_devices" />
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:srcCompat="@drawable/intermediary_devices"
+            tools:ignore="ContentDescription" />
 
+        <!-- What is network media? Section -->
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="214dp"
-            android:text="What is network media?"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_network_media"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="353dp"
-            android:layout_height="135dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="          •	Communication across a network is carried on a medium. The medium provides the channel over which the message travels from source to destination. Modern networks primarily use three types of media to interconnect devices and to provide the pathway over which data can be transmitted. These media are: Metallic wires within cables, Glass or plastic fibers (fiber optic cable) and Wireless transmission."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_network_media_desc"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
+        <!-- Network Types Section -->
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="214dp"
-            android:text="Network Types"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_network_types"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="353dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="          Networks infrastructures can vary greatly in terms of: (1) The size of the area covered. (2) The number of users connected. (3) The number and types of services available."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_network_types_intro"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <TextView
             android:id="@+id/textView17"
-            android:layout_width="353dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="          •	Local Area Network (LAN), a network serving a home, building or campus. \n\n          •	Wide Area Network (WAN), LANs separated by geographic distance are connected by this network. \n\n          •	The internet is defined as a global mesh of interconnected networks."
+            android:text="@string/text_network_types_list"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
+        <!-- Placeholder for Image 3 -->
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="370dp"
-            android:layout_height="275dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="1dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:minHeight="150dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView17"
-            app:srcCompat="@drawable/network_types" />
+            app:srcCompat="@drawable/network_types"
+            tools:ignore="ContentDescription" />
 
+        <!-- Network Representation Section -->
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="214dp"
-            android:text="Network Representation"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_network_representation"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            app:layout_constraintVertical_bias="0.014" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <TextView
             android:id="@+id/textView19"
-            android:layout_width="353dp"
-            android:layout_height="175dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="          When conveying complex information such as the network connectivity and operation of a large internetwork, it is helpful to use visual representations and graphics. Like any other language, the language of networking uses a common set of symbols to represent the different end devices, network devices and media. The ability to recognize the logical representations of the physical networking components is critical to being able to visualize the organization and operation of a network."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_network_representation_desc"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
+        <!-- Placeholder for Image 4 -->
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="370dp"
-            android:layout_height="400dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:minHeight="150dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView19"
-            app:srcCompat="@drawable/network_representation" />
+            app:srcCompat="@drawable/network_representation"
+            tools:ignore="ContentDescription" />
 
+        <!-- Protocol Function Section -->
         <TextView
             android:id="@+id/textView20"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="214dp"
-            android:text="Function of Protocol in Network Communication"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_protocol_function"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="0.014" />
-
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="353dp"
-            android:layout_height="250dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="70dp"
-            android:text="          •	A protocol is a set of predetermined rules. \n\n          •	Network protocols are used to allow devices to communicate successfully. \n\n          •	A standard is a process or protocol that has been endorsed by the networking industry and ratified by a standards organization. \n\n          •	Technology independent Protocols. \n\n          •	Many diverse types of devices can communicate using the same sets of protocols. \n\n          •	This is because protocols specify network functionality, not the underlying technology to support this functionality."
-            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <TextView
-            android:id="@+id/textView22"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView21"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="214dp"
-            android:text="Different protocols are:"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_protocol_function_desc"
             android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <!-- Different protocols are: Section -->
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/section_different_protocols"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
         <TextView
             android:id="@+id/textView23"
-            android:layout_width="353dp"
-            android:layout_height="320dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="          •	Hypertext Transfer Protocol (HTTP), is a common protocol that governs the way that a web server and a web client interact. \n\n          •	Transmission Control Protocol (TCP), is the transport protocol that manage the individual conversations between web servers and web clients. \n\n          •	Internet Protocol (IP), it is responsible for taking the formatted segments from TCP, encapsulating them into packets, assigning the appropriate addresses, and selecting the best path to the destination host. \n\n          •	Ethernet is a network access protocols describe by two primary functions, data link management and the physical transmission of data on the media."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_different_protocols_desc"
             android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
