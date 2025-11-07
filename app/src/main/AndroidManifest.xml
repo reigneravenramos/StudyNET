@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudyNET"
         tools:targetApi="31">
+
         <activity
             android:name=".Quizzes5"
             android:exported="false" />
@@ -29,36 +30,30 @@
             android:name=".Quizzes1"
             android:exported="false" />
         <activity
-            android:name=".Sessions5"
+            android:name=".Modules5"
             android:exported="false" />
         <activity
-            android:name=".Sessions4"
-            android.exported="false" />
-        <activity
-            android:name=".Sessions3"
+            android:name=".Modules4"
             android:exported="false" />
         <activity
-            android:name=".Sessions2"
+            android:name=".Modules3"
             android:exported="false" />
         <activity
-            android:name=".Sessions1"
+            android:name=".Modules2"
             android:exported="false" />
         <activity
-            android:name=".Quizzes"
+            android:name=".Modules1"
+            android:exported="false" />
+
+        <activity
+            android:name=".ModulesIntroActivity"
             android:exported="false"
-            android:label="QUIZZES" />
-        <activity
-            android:name=".Sessions"
-            android:exported="false"
-            android:label="SESSIONS" />
-        <activity
-            android:name=".SessionsIntroActivity"
-            android:exported="false"
-            android:label="SESSIONS" />
+            android:label="MODULES" />
         <activity
             android:name=".QuizzesIntroActivity"
             android:exported="false"
             android:label="QUIZZES" />
+
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
@@ -67,7 +62,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Sessions1"
+        tools:context=".Modules1"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="-1dp">
 
