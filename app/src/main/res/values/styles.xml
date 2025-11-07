@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Your existing themes go here -->
+
+    <!-- Styles for the Network Module content -->
+
+    <style name="NetworkTypeCard" parent="CardView">
+        <item name="cardBackgroundColor">#FFFFFF</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="NetworkTypeContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="NetworkTypeTitle" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#343A40</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+    <style name="NetworkTypeDefinition" parent="android:Widget.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#495057</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <!-- Styles for the server cards in Modules 4 -->
+
+    <style name="ServerCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">#FFFFFF</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+
+    <style name="ServerCardContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="ServerTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#343A40</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="ServerDescription">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#495057</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="ServerImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+</resources>

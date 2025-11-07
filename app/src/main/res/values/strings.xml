@@ -1,3 +1,165 @@
 <resources>
     <string name="app_name">StudyNET</string>
+    <!-- Resource added for Modules 1 layout -->
+    <string name="networking_vocabulary">
+\n\n• LAN - Local Area Network
+\n\n• On the Network - Other known as “node” which means every computer is connected to the network
+\n\n• Online/Offline - Connected to the network or Not connected to the network
+\n\n• Up/Down - Computer is turned on or Computer is turned off
+\n\n• Local/Remote - Resources inside a computer or Resources outside the computer
+\n\n• Internet - Huge amalgamation of computer networks strewn about the entire planet
+</string>
+    <!-- New resources for Modules 2 Layout -->
+    <string name="networking_intro_part2">
+The Network connects computers for the purpose of sharing information, devices like printers/scanners, and applications. It enables user collaboration through email, chats, and video conferencing, as well as activities like playing games and video calls. Computers are connected through network devices like Hub, Switch, Routers, Network Interface Card (NIC), and transmission media like wired connections (coaxial cables, optical fiber) and wireless (Antenna). The network is the backbone of the IT evolution, and in the digital world, it plays an important role in connecting everything on the earth like equipment, machines, appliances, gadgets, and moving objects. Networks can be classified based on the size and purpose it serves. The size of the network covers the geographical spread and the volume of the computers connected. In this session, let’s analyze several types of networks.
+</string>
+    <string name="network_type_lan">
+A Local Area Network (LAN) is a group of computers and associated devices that share a common communications line or wireless link to a server. Typically limited in size, a LAN can go up to a 1km radius (e.g., an office building or home).
+</string>
+    <string name="network_type_wan">
+A Wide Area Network (WAN) is a network that exists over a large-scale geographical area. Unlike a LAN, a WAN has no strict geographical limit and can connect multiple smaller networks (LANs and MANs) together (e.g., the Internet or a large company\'s global connection).
+</string>
+    <string name="network_type_man">
+A Metropolitan Area Network (MAN) is a computer network that interconnects users with computer resources in a geographical area or region larger than a large local area network (LAN) but smaller than a wide area network (WAN) (e.g., a city or large campus district).
+</string>
+    <string name="network_type_can">
+A Campus Area Network (CAN) is a computer network made up of an interconnection of local area networks (LANs) within a limited geographical area, such as a university campus, military base, or large industrial complex.
+</string>
+    <string name="network_type_wlan">
+A Wireless Local Area Network (WLAN) is a wireless computer network that links two or more devices using wireless communication within a limited area such as a home, school, computer laboratory, or office building.
+</string>
+    <!-- New resources for Modules 3 Layout -->
+    <string name="defining_network_title">DEFINING A NETWORK</string>
+    <string name="section_computer_network">Computer Network</string>
+    <string name="def_computer_network">
+It refers to different interconnected computing devices that can exchange data and share resources with each other. These networked devices use a system of rules, called communication protocols, to transmit information over physical or wireless technologies.
+</string>
+    <string name="section_benefits">Benefits of Computer Networking</string>
+    <string name="def_benefits">
+It allows staff to share information effortlessly, increasing productivity and efficiency. It also includes cost-effectiveness, storage efficiency, flexibility, and data security.
+</string>
+    <string name="section_kinds">Kinds of Computer Network</string>
+    <string name="kind_sharing_files_title">1. Sharing Files</string>
+    <string name="kind_sharing_files_desc">
+Networks enable you to share information with other computers in various ways. You can send a file from your computer directly to a friend’s computer by attaching the file to an email message and then mailing it, or you can let your friends access your computer over the network so that your friend can retrieve the file directly from your hard drive.
+</string>
+    <string name="kind_sharing_resources_title">2. Sharing Resources</string>
+    <string name="kind_sharing_resources_desc">
+You can set up certain computer resources, such as hard drives or printers, so that all computers on the network can access them. Hard Drives can be shared resources too. In fact, you must set up a hard drive as a shared resource to share files with other users, or you can share other resources such as an internet connection. Examples of this are sharing peripheral devices (disk, printer, etc.). A file server and laser printer in a LAN are also considered shared resources.
+</string>
+    <string name="kind_sharing_programs_title">3. Sharing Programs</string>
+    <string name="kind_sharing_programs_desc">
+Rather than keeping separate copies of programs on each person’s computer, putting them on a drive that everyone shares is sometimes the best approach. For example, if ten computer users all use a particular program, you can purchase and install ten copies of the program, one for each computer. Each of the ten users can then access the program from the shared hard drive.
+</string>
+    <!-- New resources for Modules 4 Layout -->
+    <string name="module4_title">SERVERS AND CLIENTS</string>
+    <string name="section_server_computer">Server Computer</string>
+    <string name="def_server_computer">
+A Server Computer is a server computer and nothing else. It’s dedicated to the sole task of providing shared resources, such as hard drives and printers, to be accessed by the network client computers.
+</string>
+    <string name="def_server_p2p_intro">
+Here are some points to ponder concerning the differences between dedicated server networks and peer-to-peer networks while you’re walking the dog tomorrow morning:
+</string>
+    <string name="p2p_points">
+•   \'Peer-to-peer\' networking features are built into Windows. Thus, if your computer runs Windows, you don’t have to buy any additional software to turn your computer into a server. All you have to do is enable the Windows server features. \n\n
+•   The network server features that are built into desktop versions of Windows (such as Windows 7 and 8) aren’t particularly efficient because these versions of Windows weren’t designed primarily to be network servers.\n\n
+•   Many networks are both peer-to-peer and dedicated-server networks at the same time.
+</string>
+    <string name="section_network_tick">What makes a Network Tick?</string>
+    <string name="network_tick_1_interface">1. Network interface - Inside any computer attached to a network is a special electronic circuit called the \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020**network interface**.</string>
+    <string name="network_tick_2_cable">2. Network cable: The **network cable** physically connects the computers. It plugs into the network interface card (NIC) on the back of your computer.</string>
+    <string name="network_tick_3_switch">3. Network switch: Networks built with twisted-pair cabling require one or more **switches**.</string>
+    <string name="network_tick_4_software">4. Network software: Of course, the **software** makes the network work. To make any network work, a whole bunch of software has to be set up just right.</string>
+    <string name="section_common_servers">Common types of Network Servers</string>
+    <string name="server_type_1_app_title">1. Application Servers</string>
+    <string name="server_type_1_app_desc">Sometimes referred to as a type of middleware, application servers occupy a large chunk of computing territory between database servers and the end user, and they often connect the two.</string>
+    <string name="server_type_2_client_title">2. Client Servers</string>
+    <string name="server_type_2_client_desc">In the client/server programming model, a server is a program that awaits and fulfills requests from client programs in the same or other computers.</string>
+    <string name="server_type_3_collaboration_title">3. Collaboration Servers</string>
+    <string name="server_type_3_collaboration_desc">In many ways, collaboration software, once called ‘groupware,’ demonstrates the original power of the Web. Collaboration software is designed to enable users to collaborate, regardless of location, via the Internet or a corporate intranet and to work together in a virtual atmosphere.</string>
+    <string name="server_type_4_ftp_title">4. FTP Servers</string>
+    <string name="server_type_4_ftp_desc">One of the oldest of the Internet services, File Transfer Protocol (FTP), makes it possible to move one or more files securely between computers while providing file security and organization as well as transfer control.</string>
+    <string name="server_type_5_list_title">5. List Servers</string>
+    <string name="server_type_5_list_desc">List servers offer a way to better manage mailing lists, whether they be interactive discussions open to the public or one-way lists that deliver announcements, newsletters, or advertising.</string>
+    <string name="server_type_6_mail_title">6. Mail Servers</string>
+    <string name="server_type_6_mail_desc">Almost as ubiquitous and crucial as Web servers, mail servers move and store mail over corporate networks (via LANs and WANs) and across the Internet.</string>
+    <string name="server_type_7_open_source_title">7. Open Source Servers</string>
+    <string name="server_type_7_open_source_desc">From your underlying open source server operating system to the server software that help you get your job done, open source software is a critical part of many IT infrastructures.</string>
+    <string name="server_type_8_proxy_title">8. Proxy Servers</string>
+    <string name="server_type_8_proxy_desc">Proxy servers sit between a client program (typically a Web browser) and an external server (typically another server on the Web) to filter requests, improve performance, and share connections.</string>
+    <string name="server_type_9_rtc_title">9. Real-Time Communication Servers</string>
+    <string name="server_type_9_rtc_desc">Real-time communication servers, formerly known as chat servers or IRC Servers, and still sometimes referred to as instant messaging (IM) servers, enable large numbers of users to exchange information near instantaneously.</string>
+    <string name="server_type_10_telnet_title">10. Telnet Servers</string>
+    <string name="server_type_10_telnet_desc">A Telnet server enables users to log on to a host computer and perform tasks as if they’re working on the remote computer itself.</string>
+    <string name="server_type_11_virtual_title">11. Virtual Servers</string>
+    <string name="server_type_11_virtual_desc">In 2009, the number of virtual servers deployed exceeded the number of physical servers. Today, server virtualization has become near ubiquitous in the data center.</string>
+    <string name="server_type_12_web_title">12. Web Servers</string>
+    <string name="server_type_12_web_desc">At its core, a Web server serves static content to a Web browser by loading a file from a disk and serving it across the network to a user’s Web browser.</string>
+
+    <!-- MODULE 5: COMMUNICATING OVER THE NETWORK PART 1 -->
+    <string name="module5_title">COMMUNICATING OVER THE NETWORK PART 1</string>
+    <string name="section_network_structure">Network Structure</string>
+    <string name="text_network_structure_desc">Communication begins with a message, or information that must be sent from one individual or device to another. There are many different communication methods and these methods have three elements in common. First is the **\'message source or sender\'**, these are the people or electronic devices that is needed to send a message to other individuals or devices. Second is the **\'destination or receiver\'**, which receives the message and interprets it. Lastly is the **\'channel\'** which consist of the media that provides the pathway over which the message can travel from source to destination.</string>
+
+    <string name="section_how_messages_communicated">How are messages communicated?</string>
+    <string name="text_message_communication_methods">
+        • First is the **\'multiplexing\'**, it is the process used to interleave the pieces of separate conversations together on the network. By sending smaller individual pieces from source to destination, many different conversations can be interleaved on the network.\n\n
+        • Second is the **\'segmentation\'**, which increases reliability of network communications. The separate pieces of each message do not need to travel the same pathway across the network from source to destination.
+    </string>
+
+    <string name="section_network_components">What are the components of a network?</string>
+    <string name="text_network_components_desc">
+        • **\'Hardware\'**, is often the visible components of the network platform such as laptop, a PC, a switch, or the cabling used to connect the devices.\n\n
+        • **\'Software\'**, is the services and processes of the communication programs. A network service provides information in response to a request.
+    </string>
+
+    <string name="section_end_devices_role">End Devices and their Role in the Network</string>
+    <string name="text_end_devices_intro">
+        • End devices form interface with human network and communication network \n\n
+        • Role of end devices:
+    </string>
+    <string name="text_end_devices_roles_detail">
+        o **\'Clients\'** are hosts that have software installed that enables them to request and display the information obtained from the server.\n\n
+        o **Servers** are hosts that have software installed that enables them to provide information and services, like e-mail or web pages, to other hosts on the network.\n\n
+        o **Both client and server** in modern networks, a host can act as a client, a server, or both. Software installed on the host determines which role it plays on the network.
+    </string>
+
+    <string name="section_intermediary_devices">Role of Intermediary Devices</string>
+    <string name="text_intermediary_devices_desc">
+        • In addition to the end devices that people are familiar with, networks also rely on **intermediary devices** to provide connectivity and to work behind the scenes to ensure that data flows across the network. These devices connect the individual host to the network and can connect multiple individual networks to form an internetwork.
+    </string>
+
+    <string name="section_network_media">What is network media?</string>
+    <string name="text_network_media_desc">
+        • Communication across a network is carried on a medium. The medium provides the channel over which the message travels from source to destination. Modern networks primarily use three types of media to interconnect devices and to provide the pathway over which data can be transmitted. These media are: **Metallic wires within cables**, **Glass or plastic fibers (fiber optic cable)** and **Wireless transmission**.
+    </string>
+
+    <string name="section_network_types">Network Types</string>
+    <string name="text_network_types_intro">Networks infrastructures can vary greatly in terms of: (1) The size of the area covered. (2) The number of users connected. (3) The number and types of services available.</string>
+    <string name="text_network_types_list">
+        • **Local Area Network (LAN)**, a network serving a home, building or campus. \n\n
+        • **Wide Area Network (WAN)**, LANs separated by geographic distance are connected by this network. \n\n
+        • The **internet** is defined as a global mesh of interconnected networks.
+    </string>
+
+    <string name="section_network_representation">Network Representation</string>
+    <string name="text_network_representation_desc">When conveying complex information such as the network connectivity and operation of a large internetwork, it is helpful to use visual representations and graphics. Like any other language, the language of networking uses a common set of symbols to represent the different end devices, network devices and media. The ability to recognize the logical representations of the physical networking components is critical to being able to visualize the organization and operation of a network.</string>
+
+    <string name="section_protocol_function">Function of Protocol in Network Communication</string>
+    <string name="text_protocol_function_desc">
+        • A **protocol** is a set of predetermined rules. \n\n
+        • Network protocols are used to allow devices to communicate successfully. \n\n
+        • A **standard** is a process or protocol that has been endorsed by the networking industry and ratified by a standards organization. \n\n
+        • Technology independent Protocols. \n\n
+        • Many diverse types of devices can communicate using the same sets of protocols. \n\n
+        • This is because protocols specify network functionality, not the underlying technology to support this functionality.
+    </string>
+
+    <string name="section_different_protocols">Different protocols are:</string>
+    <string name="text_different_protocols_desc">
+        • **Hypertext Transfer Protocol (HTTP)**, is a common protocol that governs the way that a web server and a web client interact. \n\n
+        • **Transmission Control Protocol (TCP)**, is the transport protocol that manage the individual conversations between web servers and web clients. \n\n
+        • **Internet Protocol (IP)**, it is responsible for taking the formatted segments from TCP, encapsulating them into packets, assigning the appropriate addresses, and selecting the best path to the destination host. \n\n
+        • **Ethernet** is a network access protocols describe by two primary functions, data link management and the physical transmission of data on the media.
+    </string>
 </resources>

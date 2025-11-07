@@ -2,620 +2,410 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="409dp"
-    android:layout_height="729dp"
-    android:background="#FFFFF0"
-    android:fillViewport="true"
-    tools:layout_editor_absoluteX="2dp"
-    tools:layout_editor_absoluteY="-1dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:fillViewport="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Modules1"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="-1dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".Modules4">
 
+        <!-- Header/Title Section -->
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="104dp"
             android:layout_marginTop="16dp"
-            android:text="SERVERS AND CLIENTS"
+            android:layout_marginBottom="24dp"
+            android:text="@string/module4_title"
             android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textColor="#343A40"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
+        <!-- Section 1: Server Computer -->
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="64dp"
-            android:text="Server Computer"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginBottom="8dp"
+            android:text="@string/section_server_computer"
+            android:textColor="#007BFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="368dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
-            android:text="          A Server Computer is a server computer and nothing else. It’s dedicated to the sole task of providing shared resources, such as hard drives and printers, to be accessed by the network client computers."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/def_server_computer"
+            android:textColor="#495057"
+            android:textSize="14sp" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="381dp"
-            android:layout_height="197dp"
-            android:layout_marginTop="176dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/server_computer"
-            tools:layout_editor_absoluteX="14dp" />
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Diagram illustrating a server computer providing resources to clients"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/server_computer" />
+
+        <!-- P2P vs Dedicated Server Points -->
+        <TextView
+            android:id="@+id/textView4_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/def_server_p2p_intro"
+            android:textColor="#495057"
+            android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="368dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
-            android:text="Here are some points to ponder concerning the differences between dedicated server networks and peer-to-peer networks while you’re walking the dog tomorrow morning:"
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            android:id="@+id/textView5_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/p2p_points"
+            android:textColor="#495057"
+            android:textSize="14sp" />
 
+        <!-- Section 2: What makes a Network Tick? -->
         <TextView
-            android:id="@+id/textView5"
-            android:layout_width="368dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          •	'Peer-to-peer' networking features are built into Windows. Thus, if your computer runs Windows, you don’t have to buy any additional software to turn your computer into a server. All you have to do is enable the Windows server features. "
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="368dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          •	The network server features that are built into desktop versions of Windows (such as Windows 7 and 8) aren’t particularly efficient because these versions of Windows weren’t designed primarily to be network servers."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="368dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          •	Many networks are both peer-to-peer and dedicated-server networks at the same time."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="368dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="What makes a Network Tick? "
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            android:id="@+id/textView8_tick_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/section_network_tick"
+            android:textColor="#007BFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="368dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          1. Network interface - Inside any computer attached to a network is a special electronic circuit called the network interface."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/network_tick_1_interface"
+            android:textColor="#495057"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="368dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          2. Network cable: The network cable physically connects the computers. It plugs into the network interface card (NIC) on the back of your computer."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/network_tick_2_cable"
+            android:textColor="#495057"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="368dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          3. Network switch: Networks built with twisted-pair cabling require one or more switches."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/network_tick_3_switch"
+            android:textColor="#495057"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="368dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          4. Network software: Of course, the software makes the network work. To make any network work, a whole bunch of software has to be set up just right."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="@string/network_tick_4_software"
+            android:textColor="#495057"
+            android:textSize="14sp" />
 
+        <!-- Section 3: Common types of Network Servers Header -->
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            android:text="Common types of Network Servers"
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/section_common_servers"
+            android:textColor="#007BFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            android:text="1.Application Servers"
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        <!-- Server List Start (Using CardView for visual appeal) -->
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="368dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          Sometimes referred to as a type of middleware, application servers occupy a large chunk of computing territory between database servers and the end user, and they often connect the two."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        <!-- 1. Application Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="381dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="1130dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/application_server"
-            tools:layout_editor_absoluteX="16dp" />
+            <LinearLayout style="@style/ServerCardContent">
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:text="2.Client Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_1_app_title" />
 
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="368dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          In the client/server programming model, a server is a program that awaits and fulfills requests from client programs in the same or other computers."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_1_app_desc" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="381dp"
-            android:layout_height="110dp"
-            android:layout_marginTop="1430dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/client_servers"
-            tools:layout_editor_absoluteX="16dp" />
+                <ImageView
+                    style="@style/ServerImage"
+                    android:contentDescription="Diagram illustrating an application server"
+                    app:srcCompat="@drawable/application_server" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:text="3.Collaboration Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        <!-- 2. Client Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
 
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="368dp"
-            android:layout_height="380dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          In many ways, collaboration software, once called ‘groupware,’ demonstrates the original power of the Web. Collaboration software designed to enable users to collaborate, regardless of location, via the Internet or a corporate intranet and to work together in a virtual atmosphere."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            <LinearLayout style="@style/ServerCardContent">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="381dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="1730dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/collaboration_servers"
-            tools:layout_editor_absoluteX="16dp" />
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_2_client_title" />
 
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:text="4.FTP Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_2_client_desc" />
 
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="368dp"
-            android:layout_height="380dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          One of the oldest of the Internet services, File Transfer Protocol, makes it possible to move one or more files securely between computers while providing file security and organization as well as transfer control."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+                <ImageView
+                    style="@style/ServerImage"
+                    android:contentDescription="Diagram illustrating client-server model"
+                    app:srcCompat="@drawable/client_servers" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="381dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="2050dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ftp_servers"
-            tools:layout_editor_absoluteX="16dp" />
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:text="5.List Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        <!-- 3. Collaboration Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
 
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="368dp"
-            android:layout_height="350dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          List servers offer a way to better manage mailing lists, whether they be interactive discussions open to the public or one-way lists that deliver announcements, newsletters or advertising."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+            <LinearLayout style="@style/ServerCardContent">
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="381dp"
-            android:layout_height="190dp"
-            android:layout_marginTop="2370dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/list_servers"
-            tools:layout_editor_absoluteX="16dp" />
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_3_collaboration_title" />
 
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:text="6.Mail Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_3_collaboration_desc" />
 
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="368dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          Almost as ubiquitous and crucial as Web servers, mail servers move and store mail over corporate networks (via LANs and WANs) and across the Internet."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+                <ImageView
+                    style="@style/ServerImage"
+                    android:contentDescription="Diagram illustrating collaboration servers"
+                    app:srcCompat="@drawable/collaboration_servers" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="390dp"
-            android:layout_height="85dp"
-            android:layout_marginTop="2690dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/mail_server"
-            tools:layout_editor_absoluteX="16dp" />
+        <!-- 4. FTP Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
 
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:text="7.Open Source Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            <LinearLayout style="@style/ServerCardContent">
 
-        <TextView
-            android:id="@+id/textView27"
-            android:layout_width="368dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          From your underlying open source server operating system to the server software that help you get your job done, open source software is a critical part of many IT infrastructures."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_4_ftp_title" />
 
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="390dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="2920dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/open_source_server"
-            tools:layout_editor_absoluteX="16dp" />
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_4_ftp_desc" />
 
-        <TextView
-            android:id="@+id/textView28"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:text="8. Proxy Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+                <ImageView
+                    style="@style/ServerImage"
+                    android:contentDescription="Diagram illustrating FTP file transfer"
+                    app:srcCompat="@drawable/ftp_servers" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/textView29"
-            android:layout_width="368dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          Proxy servers sit between a client program (typically a Web browser) and an external server (typically another server on the Web) to filter requests, improve performance, and share connections."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+        <!-- 5. List Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="390dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="3220dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/proxy_server"
-            tools:layout_editor_absoluteX="16dp" />
+            <LinearLayout style="@style/ServerCardContent">
 
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:text="9.Real-Time Communication Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_5_list_title" />
 
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="368dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          Real-time communication servers, formerly known as chat servers or IRC Servers, and still sometimes referred to as instant messaging (IM) servers, enable large numbers users to exchange information near instantaneously."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_5_list_desc" />
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="390dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="3550dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/real_time_communication_server"
-            tools:layout_editor_absoluteX="16dp" />
+                <ImageView
+                    style="@style/ServerImage"
+                    android:layout_height="190dp"
+                    android:contentDescription="Diagram illustrating list servers for managing mailing lists"
+                    app:srcCompat="@drawable/list_servers" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/textView32"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:text="10.Telnet Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+        <!-- 6. Mail Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
 
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="368dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          A Telnet server enables users to log on to a host computer and perform tasks as if they’re working on the remote computer itself."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+            <LinearLayout style="@style/ServerCardContent">
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="390dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="3830dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/telnet_server"
-            tools:layout_editor_absoluteX="16dp" />
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_6_mail_title" />
 
-        <TextView
-            android:id="@+id/textView34"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:text="11.Virtual Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_6_mail_desc" />
 
-        <TextView
-            android:id="@+id/textView35"
-            android:layout_width="368dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          In 2009, the number of virtual servers deployed exceeded the number of physical servers. Today, server virtualization has become near ubiquitous in the data center."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+                <ImageView
+                    style="@style/ServerImage"
+                    android:layout_height="85dp"
+                    android:contentDescription="Diagram illustrating mail server functionality"
+                    app:srcCompat="@drawable/mail_server" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="390dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="4120dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/virtual_server"
-            tools:layout_editor_absoluteX="16dp" />
+        <!-- 7. Open Source Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
 
-        <TextView
-            android:id="@+id/textView36"
-            android:layout_width="368dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:text="12.Web Servers"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+            <LinearLayout style="@style/ServerCardContent">
 
-        <TextView
-            android:id="@+id/textView37"
-            android:layout_width="368dp"
-            android:layout_height="250dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:text="          At its core, a Web server serves static content to a Web browser by loading a file from a disk and serving it across the network to a user’s Web browser."
-            android:textAlignment="viewStart"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_7_open_source_title" />
 
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="390dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="4400dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/web_server"
-            tools:layout_editor_absoluteX="16dp" />
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_7_open_source_desc" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    style="@style/ServerImage"
+                    android:contentDescription="Diagram illustrating open source server infrastructure"
+                    app:srcCompat="@drawable/open_source_server" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 8. Proxy Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout style="@style/ServerCardContent">
+
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_8_proxy_title" />
+
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_8_proxy_desc" />
+
+                <ImageView
+                    style="@style/ServerImage"
+                    android:contentDescription="Diagram illustrating a proxy server filtering requests"
+                    app:srcCompat="@drawable/proxy_server" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 9. Real-Time Communication Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout style="@style/ServerCardContent">
+
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_9_rtc_title" />
+
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_9_rtc_desc" />
+
+                <ImageView
+                    style="@style/ServerImage"
+                    android:contentDescription="Diagram illustrating real-time communication"
+                    app:srcCompat="@drawable/real_time_communication_server" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 10. Telnet Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout style="@style/ServerCardContent">
+
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_10_telnet_title" />
+
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_10_telnet_desc" />
+
+                <ImageView
+                    style="@style/ServerImage"
+                    android:contentDescription="Diagram illustrating a Telnet connection"
+                    app:srcCompat="@drawable/telnet_server" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 11. Virtual Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout style="@style/ServerCardContent">
+
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_11_virtual_title" />
+
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_11_virtual_desc" />
+
+                <ImageView
+                    style="@style/ServerImage"
+                    android:layout_height="170dp"
+                    android:contentDescription="Diagram illustrating a virtual server infrastructure"
+                    app:srcCompat="@drawable/virtual_server" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 12. Web Servers -->
+        <androidx.cardview.widget.CardView
+            style="@style/ServerCard"
+            android:layout_marginBottom="40dp">
+
+            <LinearLayout style="@style/ServerCardContent">
+
+                <TextView
+                    style="@style/ServerTitle"
+                    android:text="@string/server_type_12_web_title" />
+
+                <TextView
+                    style="@style/ServerDescription"
+                    android:text="@string/server_type_12_web_desc" />
+
+                <ImageView
+                    style="@style/ServerImage"
+                    android:layout_height="170dp"
+                    android:contentDescription="Diagram illustrating a web server serving static content"
+                    app:srcCompat="@drawable/web_server" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 </ScrollView>
