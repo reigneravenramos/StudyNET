@@ -18,9 +18,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/app_bar_color"
-        app:itemTextColor="@color/bottom_nav_text_color"
+        android:background="@color/primary_blue"
         app:itemIconTint="@color/bottom_nav_text_color"
+        app:itemTextColor="@color/bottom_nav_text_color"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>

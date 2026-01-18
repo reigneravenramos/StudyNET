@@ -1,411 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
-    android:fillViewport="true">
+    android:background="@drawable/homescreen">
 
-    <LinearLayout
+    <View
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary_blue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:padding="8dp"
+        android:src="@drawable/arrow_prev_small"
+        app:layout_constraintBottom_toBottomOf="@id/top_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_bar"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context=".Modules4">
+        android:layout_marginStart="8dp"
+        android:text="MODULE 4"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/top_bar"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/top_bar" />
 
-        <!-- Header/Title Section -->
-        <TextView
-            android:id="@+id/textView1"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:text="@string/module4_title"
-            android:textAlignment="center"
-            android:textColor="#343A40"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <!-- Section 1: Server Computer -->
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="@string/section_server_computer"
-            android:textColor="#007BFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="@string/section_server_computer"
+                android:textColor="@color/primary_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:lineSpacingExtra="4dp"
-            android:text="@string/def_server_computer"
-            android:textColor="#495057"
-            android:textSize="14sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card_bg"
+                android:padding="16dp"
+                android:text="@string/def_server_computer"
+                android:textColor="@color/text_color_main"
+                android:textSize="14sp" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginBottom="24dp"
-            android:contentDescription="Diagram illustrating a server computer providing resources to clients"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/server_computer" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_card_bg"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/server_computer" />
 
-        <!-- P2P vs Dedicated Server Points -->
-        <TextView
-            android:id="@+id/textView4_intro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:lineSpacingExtra="4dp"
-            android:text="@string/def_server_p2p_intro"
-            android:textColor="#495057"
-            android:textSize="14sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_card_bg"
+                android:padding="16dp"
+                android:text="@string/def_server_p2p_intro"
+                android:textColor="@color/text_color_main"
+                android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/textView5_points"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:lineSpacingExtra="4dp"
-            android:text="@string/p2p_points"
-            android:textColor="#495057"
-            android:textSize="14sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_card_bg"
+                android:padding="16dp"
+                android:text="@string/p2p_points"
+                android:textColor="@color/text_color_main"
+                android:textSize="14sp" />
 
-        <!-- Section 2: What makes a Network Tick? -->
-        <TextView
-            android:id="@+id/textView8_tick_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="@string/section_network_tick"
-            android:textColor="#007BFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/section_common_servers"
+                android:textColor="@color/primary_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/network_tick_1_interface"
-            android:textColor="#495057"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/network_tick_2_cable"
-            android:textColor="#495057"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/network_tick_3_switch"
-            android:textColor="#495057"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="@string/network_tick_4_software"
-            android:textColor="#495057"
-            android:textSize="14sp" />
-
-        <!-- Section 3: Common types of Network Servers Header -->
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/section_common_servers"
-            android:textColor="#007BFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- Server List Start (Using CardView for visual appeal) -->
-
-        <!-- 1. Application Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
+            <!-- Application Server -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card_bg"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
                 <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_1_app_title" />
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/server_type_1_app_title"
+                    android:textColor="@color/text_color_main"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
                 <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_1_app_desc" />
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/server_type_1_app_desc"
+                    android:textColor="@color/text_color_main"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="12dp"/>
                 <ImageView
-                    style="@style/ServerImage"
-                    android:contentDescription="Diagram illustrating an application server"
-                    app:srcCompat="@drawable/application_server" />
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/application_server" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <!-- 2. Client Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
+            <!-- Web Server -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card_bg"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
                 <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_2_client_title" />
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/server_type_12_web_title"
+                    android:textColor="@color/text_color_main"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
                 <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_2_client_desc" />
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/server_type_12_web_desc"
+                    android:textColor="@color/text_color_main"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="12dp"/>
                 <ImageView
-                    style="@style/ServerImage"
-                    android:contentDescription="Diagram illustrating client-server model"
-                    app:srcCompat="@drawable/client_servers" />
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/web_server" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <!-- 3. Collaboration Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_3_collaboration_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_3_collaboration_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:contentDescription="Diagram illustrating collaboration servers"
-                    app:srcCompat="@drawable/collaboration_servers" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- 4. FTP Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_4_ftp_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_4_ftp_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:contentDescription="Diagram illustrating FTP file transfer"
-                    app:srcCompat="@drawable/ftp_servers" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- 5. List Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_5_list_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_5_list_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:layout_height="190dp"
-                    android:contentDescription="Diagram illustrating list servers for managing mailing lists"
-                    app:srcCompat="@drawable/list_servers" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- 6. Mail Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_6_mail_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_6_mail_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:layout_height="85dp"
-                    android:contentDescription="Diagram illustrating mail server functionality"
-                    app:srcCompat="@drawable/mail_server" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- 7. Open Source Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_7_open_source_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_7_open_source_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:contentDescription="Diagram illustrating open source server infrastructure"
-                    app:srcCompat="@drawable/open_source_server" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- 8. Proxy Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_8_proxy_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_8_proxy_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:contentDescription="Diagram illustrating a proxy server filtering requests"
-                    app:srcCompat="@drawable/proxy_server" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- 9. Real-Time Communication Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_9_rtc_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_9_rtc_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:contentDescription="Diagram illustrating real-time communication"
-                    app:srcCompat="@drawable/real_time_communication_server" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- 10. Telnet Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_10_telnet_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_10_telnet_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:contentDescription="Diagram illustrating a Telnet connection"
-                    app:srcCompat="@drawable/telnet_server" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- 11. Virtual Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_11_virtual_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_11_virtual_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:layout_height="170dp"
-                    android:contentDescription="Diagram illustrating a virtual server infrastructure"
-                    app:srcCompat="@drawable/virtual_server" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- 12. Web Servers -->
-        <androidx.cardview.widget.CardView
-            style="@style/ServerCard"
-            android:layout_marginBottom="40dp">
-
-            <LinearLayout style="@style/ServerCardContent">
-
-                <TextView
-                    style="@style/ServerTitle"
-                    android:text="@string/server_type_12_web_title" />
-
-                <TextView
-                    style="@style/ServerDescription"
-                    android:text="@string/server_type_12_web_desc" />
-
-                <ImageView
-                    style="@style/ServerImage"
-                    android:layout_height="170dp"
-                    android:contentDescription="Diagram illustrating a web server serving static content"
-                    app:srcCompat="@drawable/web_server" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,156 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
-    android:fillViewport="true">
+    android:background="@drawable/homescreen">
 
-    <!-- Use LinearLayout for clean vertical content flow -->
-    <LinearLayout
+    <View
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary_blue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:padding="8dp"
+        android:src="@drawable/arrow_prev_small"
+        app:layout_constraintBottom_toBottomOf="@id/top_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_bar"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context=".Modules1">
+        android:layout_marginStart="8dp"
+        android:text="MODULE 1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/top_bar"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/top_bar" />
 
-        <!-- Header/Title Section -->
-        <TextView
-            android:id="@+id/textView1"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:text="INTRODUCTION TO NETWORKING PART 1"
-            android:textAlignment="center"
-            android:textColor="#343A40"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <!-- Section 1: What is a Computer Network? -->
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="What is a Computer Network?"
-            android:textColor="#007BFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="INTRODUCTION TO NETWORKING PART 1"
+                android:textColor="@color/primary_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:lineSpacingExtra="4dp"
-            android:text="A 'network' is nothing more than two or more computers connected by a cable or by a wireless radio connection in order for them to exchange information. Here the figure shows how a typical network works, as you can see all PC’s are connected via network cable to a central network device: the switch."
-            android:textColor="#495057"
-            android:textSize="14sp" />
-
-        <!-- Image with clean padding -->
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_marginBottom="24dp"
-            android:scaleType="centerCrop"
-            android:contentDescription="Diagram of computer networking"
-            app:srcCompat="@drawable/computer_networking" />
-
-        <!-- Section 2: Vocabulary - Put in a Card for Visual separation -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:background="@drawable/rounded_card_bg"
+                android:padding="16dp"
+                android:text="A 'network' is nothing more than two or more computers connected by a cable or by a wireless radio connection in order for them to exchange information. Here the figure shows how a typical network works, as you can see all PC’s are connected via network cable to a central network device: the switch."
+                android:textColor="@color/text_color_main"
+                android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:text="Some Computer Networking Vocabulary"
-                    android:textColor="#343A40"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_card_bg"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/computer_networking" />
 
-                <!-- The vocabulary list has improved formatting -->
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:lineSpacingExtra="6dp"
-                    android:text="@string/networking_vocabulary"
-                    android:textColor="#495057"
-                    android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:text="Computer Networking Vocabulary"
+                android:textColor="@color/primary_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card_bg"
+                android:padding="16dp"
+                android:text="@string/networking_vocabulary"
+                android:textColor="@color/text_color_main"
+                android:textSize="14sp" />
 
-        <!-- Continue main text flow -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/rounded_card_bg"
+                android:padding="16dp"
+                android:text="The goal of any computer network is to allow multiple computers to communicate. The type of communication can be as varied as the type of conversations you might have throughout the course of the day. For example, the communication might be a download of an MP3 audio file; using a web browser to check your instructor’s web page; using an instant-messaging service; or writing an email."
+                android:textColor="@color/text_color_main"
+                android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:lineSpacingExtra="4dp"
-            android:text="In general, the definition of a computer network is all about the combination of computer hardware, cabling, network devices, and computer software used together to allow computers to communicate with each other. The goal of any computer network is to allow multiple computers to communicate. The type of communication can be as varied as the type of conversations you might have throughout the course of the day. For example, the communication might be a download of an MP3 audio file for your MP3 player; using a web browser to check your instructor’s web page to see what assignments and test might be coming up; using an instant-messaging service, such as FB Messenger, to send text messages to a friend; or writing an email and sending it to a business associate."
-            android:textColor="#495057"
-            android:textSize="14sp" />
-
-        <!-- Section 3: Small Network -->
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="A Small Network: Two PCs and One Cable"
-            android:textColor="#007BFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:lineSpacingExtra="4dp"
-            android:text="You can create a simple network within two computers and a cable. Although it’s not a terribly impressive network, such a network does occasionally serve a good purpose in real life, as well as being useful for discussing networking and learning some basic skills in classroom labs."
-            android:textColor="#495057"
-            android:textSize="14sp" />
-
-        <!-- Section 4: Very Large Network -->
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="A Very Large Network"
-            android:textColor="#007BFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:lineSpacingExtra="4dp"
-            android:text="From one perspective, the Internet is a very large, global network that allows almost every computer on the planet to communicate with the other computers on the planet. Not only is it a network in the formal sense, the communication it enables worldwide, across cultures and political boundaries has fundamentally changed the world as we know it."
-            android:textColor="#495057"
-            android:textSize="14sp" />
-
-    </LinearLayout>
-
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
