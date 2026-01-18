@@ -9,17 +9,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity implements OnNavigateListener {
 
-    // Define the constants used in the Intro Activities (for clarity, they should be in a single utility class or defined here)
     public static final String NAVIGATE_TO_FRAGMENT_EXTRA = "NAVIGATE_TO_FRAGMENT";
     public static final String FRAGMENT_MODULES = "MODULES";
     public static final String FRAGMENT_QUIZZES = "QUIZZES";
 
-
-    final FragmentManager fm = getSupportFragmentManager();
-    final Fragment homeFragment = new HomeFragment();
-    final Fragment modulesFragment = new ModulesFragment();
-    final Fragment quizzesFragment = new QuizzesFragment();
-    Fragment activeFragment = homeFragment;
+    private FragmentManager fm;
+    private Fragment homeFragment;
+    private Fragment modulesFragment;
+    private Fragment quizzesFragment;
+    private Fragment activeFragment;
 
     private BottomNavigationView bottomNavigationView;
 
@@ -32,51 +30,76 @@ public class HomeActivity extends AppCompatActivity implements OnNavigateListene
             getSupportActionBar().setTitle("StudyNet");
         }
 
-        // Initialize fragments (ensure homeFragment is added last and shown initially)
-        fm.beginTransaction().add(R.id.fragment_container, quizzesFragment, "quizzes").hide(quizzesFragment).commit();
-        fm.beginTransaction().add(R.id.fragment_container, modulesFragment, "modules").hide(modulesFragment).commit();
-        fm.beginTransaction().add(R.id.fragment_container, homeFragment, "home").commit();
-
+        fm = getSupportFragmentManager();
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-        bottomNavigationView.setSelectedItemId(R.id.nav_home);
+        if (savedInstanceState == null) {
+            // First time initialization - Create and add fragments
+            homeFragment = new HomeFragment();
+            modulesFragment = new ModulesFragment();
+            quizzesFragment = new QuizzesFragment();
+
+            fm.beginTransaction().add(R.id.fragment_container, quizzesFragment, "quizzes").hide(quizzesFragment).commit();
+            fm.beginTransaction().add(R.id.fragment_container, modulesFragment, "modules").hide(modulesFragment).commit();
+            fm.beginTransaction().add(R.id.fragment_container, homeFragment, "home").commit();
+            
+            activeFragment = homeFragment;
+        } else {
+            // Restore existing fragments to prevent duplication
+            homeFragment = fm.findFragmentByTag("home");
+            modulesFragment = fm.findFragmentByTag("modules");
+            quizzesFragment = fm.findFragmentByTag("quizzes");
+            
+            // Re-determine which fragment was active
+            if (homeFragment != null && !homeFragment.isHidden()) {
+                activeFragment = homeFragment;
+            } else if (modulesFragment != null && !modulesFragment.isHidden()) {
+                activeFragment = modulesFragment;
+            } else if (quizzesFragment != null && !quizzesFragment.isHidden()) {
+                activeFragment = quizzesFragment;
+            } else {
+                activeFragment = homeFragment;
+            }
+        }
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
-            if (itemId == R.id.nav_home) {
-                fm.beginTransaction().hide(activeFragment).show(homeFragment).commit();
-                activeFragment = homeFragment;
-                return true;
-            } else if (itemId == R.id.nav_modules) {
-                fm.beginTransaction().hide(activeFragment).show(modulesFragment).commit();
-                activeFragment = modulesFragment;
-                return true;
-            } else if (itemId == R.id.nav_quizzes) {
-                fm.beginTransaction().hide(activeFragment).show(quizzesFragment).commit();
-                activeFragment = quizzesFragment;
+            Fragment nextFragment = null;
+            
+            if (itemId == R.id.nav_home) nextFragment = homeFragment;
+            else if (itemId == R.id.nav_modules) nextFragment = modulesFragment;
+            else if (itemId == R.id.nav_quizzes) nextFragment = quizzesFragment;
+
+            if (nextFragment != null && nextFragment != activeFragment) {
+                fm.beginTransaction().hide(activeFragment).show(nextFragment).commit();
+                activeFragment = nextFragment;
                 return true;
             }
-            return false;
+            return itemId == R.id.nav_home || itemId == R.id.nav_modules || itemId == R.id.nav_quizzes;
         });
 
-        // *** NEW LOGIC: Check if launched from an Intro Activity ***
+        // Handle navigation if started from Intro activities
         handleIntentNavigation(getIntent());
     }
 
     private void handleIntentNavigation(Intent intent) {
         if (intent != null && intent.hasExtra(NAVIGATE_TO_FRAGMENT_EXTRA)) {
             String fragmentToLoad = intent.getStringExtra(NAVIGATE_TO_FRAGMENT_EXTRA);
+            Fragment targetFragment = null;
+            int navId = -1;
 
             if (FRAGMENT_MODULES.equals(fragmentToLoad)) {
-                // Navigate to Modules Fragment
-                fm.beginTransaction().hide(activeFragment).show(modulesFragment).commit();
-                activeFragment = modulesFragment;
-                bottomNavigationView.setSelectedItemId(R.id.nav_modules);
+                targetFragment = modulesFragment;
+                navId = R.id.nav_modules;
             } else if (FRAGMENT_QUIZZES.equals(fragmentToLoad)) {
-                // Navigate to Quizzes Fragment
-                fm.beginTransaction().hide(activeFragment).show(quizzesFragment).commit();
-                activeFragment = quizzesFragment;
-                bottomNavigationView.setSelectedItemId(R.id.nav_quizzes);
+                targetFragment = quizzesFragment;
+                navId = R.id.nav_quizzes;
+            }
+
+            if (targetFragment != null && targetFragment != activeFragment) {
+                fm.beginTransaction().hide(activeFragment).show(targetFragment).commit();
+                activeFragment = targetFragment;
+                bottomNavigationView.setSelectedItemId(navId);
             }
         }
     }
