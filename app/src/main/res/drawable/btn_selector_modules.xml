@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed state: Tapped color (primary_blue) -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary_blue" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- Hovered/Focused state (Android typically treats Focused/Hovered same for touch) -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary_blue" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- Default state: The same light blue as the first option -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_light_blue" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</selector>
