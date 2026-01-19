@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homescreen">
@@ -26,50 +25,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/top_bar" />
 
-    <ImageView
-        android:id="@+id/intro_image"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/seal_temp_1"
+    <TextView
+        android:id="@+id/intro_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/rounded_card_bg"
+        android:paddingStart="24dp"
+        android:paddingTop="90dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="32dp"
+        android:text="Hello! I’m Sealbert, your chubby learning buddy. 🦭\n\nWelcome to the Modules! This is where all your networking lessons and reviewer materials are kept. Explore structured modules designed to help you understand networking concepts, strengthen your skills, and discover more technical topics as you learn and grow. Let’s study together!"
+        android:textColor="@color/text_color_main"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/top_bar" />
 
-    <TextView
-        android:id="@+id/intro_card"
-        android:layout_width="354dp"
-        android:layout_height="196dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/rounded_card_bg"
-        android:padding="24dp"
-        android:text="Hello! I’m Sealbert, your chubby learning buddy. 🦭
-Welcome to the Modules! This is where all your networking lessons and reviewer materials are kept. Explore structured modules designed to help you understand networking concepts, strengthen your skills, and discover more technical topics as you learn and grow. Let’s study together!"
-        android:textColor="@color/text_color_main"
-        android:textSize="14sp"
+    <ImageView
+        android:id="@+id/intro_image"
+        android:layout_width="220dp"
+        android:layout_height="180dp"
+        android:elevation="4dp"
+        android:src="@drawable/seal_temp_2"
+        app:layout_constraintBottom_toTopOf="@+id/intro_card"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/intro_image" />
+        app:layout_constraintTop_toTopOf="@+id/intro_card" />
 
     <Button
         android:id="@+id/btn_start_modules"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="60dp"
         android:background="@drawable/btn_rounded_blue_light"
         android:text="REVIEW!"
         android:textAllCaps="true"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/intro_card" />
 
